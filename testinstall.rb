@@ -1,10 +1,10 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Testinstaller < Formula
+class Testinstall < Formula
   desc "Test installer for cycloneControlSDK_python"
   homepage "https://www.pemicro.com/"
-  url "https://github.com/TrevorChan1/testInstall/raw/main/testInstaller.tar"
+  url "https://github.com/TrevorChan1/testInstall/raw/main/testInstall.tar"
   version "1.0.0"
   sha256 "8e917466db99d77d3300eafa811d8052a679d79869e3ae72164431c350418492"
   license "BSD-3-Clause"
@@ -20,7 +20,7 @@ class Testinstaller < Formula
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+    bin.install "testInstall"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
 
